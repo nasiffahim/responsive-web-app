@@ -1,6 +1,7 @@
 /* poppins font family */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* shared styles */
 .dis-flex{
@@ -10,8 +11,7 @@
 /* header styles */
 
 header > section{
-    max-width: 1440px;
-    margin: 0px 100px;
+    margin: 0rem 6.25rem;
 }
 
 /* nav */
@@ -47,12 +47,12 @@ header > section{
 /* banner styles */
 
 #banner-section{
-    max-width: 1440px;
-    margin: 25px 100px;
+    /* max-width: 1440px; */
+    margin: 1.5rem 6.25rem;
 }
 
 .banner{
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
@@ -94,7 +94,7 @@ header > section{
 }
 
 .banner-img-container{
-    width: 500px;
+    width: 475px;
     height: 475px;
     background-image: url("../images/Circle\ design.svg");
     background-repeat: no-repeat;
@@ -105,6 +105,91 @@ header > section{
     height: 414px;
     padding-top: 30px;
 }
+
+
+/* main styles */
+
+.partners{
+    margin: 5rem 10rem;
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    padding: 2rem 3.5rem;
+    border-top: 1px groove;
+    border-bottom: 1px groove;
+}
+
+
+/* main card styles */
+
+.checked {
+    color: orange;
+}
+
+.card-box-container{
+    margin: 6.25rem 12rem;
+}
+
+.card-box-main-title{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: rgba(58, 58, 58, 1);
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.card-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    position: static;
+}
+
+.card-box-items{
+    width: 330px;
+    height: 475px;
+    border-radius: 3px;
+    background-color: rgba(226, 223, 223, 1);
+}
+
+.card-image{
+    margin: 0.9rem;
+}
+
+.card-box-title{
+    margin: 0rem 1rem;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 1.75rem;
+    color: rgba(24, 25, 31, 1);
+}
+
+.card-box-price{
+    margin: 0.5rem 1rem;
+    font-family: "Inter", serif;
+    font-size: 1.5rem;
+}
+
+.card-item-review{
+    margin: 0rem 1rem;
+}
+
+.card-box-desc{
+    margin: 0.5rem 1rem;
+    font-family: "Inter", serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: rgba(120, 120, 133, 1);
+}
+
+
+
+
+
+
+
 
 
 /* responsive layout for mobile devices */
@@ -163,6 +248,21 @@ header > section{
         background-size: contain;
         background-position: center;
     }
+    .partners{
+        flex-wrap: wrap;
+        padding: 0rem;
+        margin: 4rem 0rem;
+        gap: 1rem;
+        border: none;
+    }
+
+    .card-box{
+        grid-template-columns: 1fr;  
+    }
+    .card-box-container{
+        margin: 0rem;
+        padding: 0rem;
+    }
     
 }
 
@@ -182,5 +282,19 @@ header > section{
         height: auto;
         align-items: center;
         text-align: center;
+    }
+    .partners{
+        flex-wrap: wrap;
+        padding: 0rem;
+        margin: 4rem 0rem;
+        gap: 1rem;
+        border: none;
+    }
+    .card-box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-box-container{
+        margin: 0rem;
+        padding: 0rem;
     }
 }
