@@ -128,6 +128,9 @@ header > section{
 
 .card-box-container{
     margin: 6.25rem 12rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 .card-box-main-title{
@@ -142,9 +145,10 @@ header > section{
 .card-box{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     justify-items: center;
-    position: static;
+    max-width: calc((330px * 3) + (1.5rem * 2));
+    align-self: center;
 }
 
 .card-box-items{
@@ -292,6 +296,7 @@ header > section{
     }
     .card-box{
         grid-template-columns: repeat(2, 1fr);
+        max-width: calc((330px * 2) + 1rem);
     }
     .card-box-container{
         margin: 0rem;
